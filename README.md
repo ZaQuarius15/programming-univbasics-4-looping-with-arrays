@@ -197,4 +197,6 @@ many elements there are!
 
 ## Resources
 
-- [`while` loops]: https://ruby-doc.org/core-2.5.0/doc/syntax/control_expressions_rdoc.html#label-while+Loop
+- [`while` loops][while]
+
+[while]: https://ruby-doc.org/core-2.5.0/doc/syntax/control_expressions_rdoc.html#label-while+Loop
