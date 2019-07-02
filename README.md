@@ -189,6 +189,14 @@ end
 As long as `counter` is less than the return value of `array.length`, the loop
 will execute.
 
+## Iteration
+
+Using a loop to access each element in an array is very common in programming and 
+is generally referred to as _iteration_. We _iterate_ over each element, in these
+examples, printing out the values. In other examples, we might want to iterate
+over an array and update each element's value. If the values were numbers, we could
+do things like _sum_ all the values together using while loops and basic iteration.
+
 ## Conclusion
 
 Loops are a powerful tool for working with arrays. With just a small amount of
