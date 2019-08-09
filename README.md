@@ -2,39 +2,26 @@
 
 ## Learning Goals
 
-- Use arrays to loop a specific number of times
-- Access each element in an array programmatically
+- Use `Array`s to loop a specific number of times
+- Access each element in an `Array` programmatically
 
 ## Introduction
 
-With an understanding of arrays and hashes, it is time to start putting them
-to work. So far, we've been working on arrays that we can see ahead of time.
+With an understanding of `Array`s and `Hash`es, it is time to start putting
+them to work. Finding out simple things like the size of the `Array` or whether
+it contains the `String` `"Byron"` is useful, but only in a small way.
 
-```ruby
-pets = ["Dog", "Cat", "Fish", "Bird"]
-```
-
-Above, we can see what elements are present and what order they are in. However,
-as we build more complex projects, we will start to run into situations where
-we have to handle an array that we _don't_ know the contents of or how many
-elements there actually are inside!
-
-We need to take a programmatic approach to this. We previously brought up the
-concept of abstracting code - that is, writing code that moves away from
-concrete details in favor of a reusable, generalized process.
-
-In this lesson, we're going to discuss one of the most common ways to handle
-arrays abstractly - we will be using _loops_ to access their elements.
+We will learn now how to loop through the elements of an `Array`.
 
 ## Hard-Coding Array Output
 
-Let's consider the `pets` example a little further.
+Let's consider a simple `pets` example.
 
 ```ruby
 pets = ["Dog", "Cat", "Fish", "Bird"]
 ```
 
-Say we wanted to output each element in the `pets` array. We could write:
+Say we wanted to output each element in the `pets` `Array`. We could write:
 
 ```ruby
 puts pets[0] #=> Dog
@@ -45,36 +32,27 @@ puts pets[3] #=> Bird
 
 This works, but it is what programmers refer to as _hard-coded_. Hard-code is
 code that is fixed in place. The above statements all rely on the assumption
-that the `pets` array is going to be _four_ elements long. If we modified the
-`pets` array, say we want to add an additional pet, the hamster. We go ahead and
-add "Hamster" to our array:
+that the `pets` `Array` is going to be _four_ elements long.
+
+But what if we added a new pet at index `4`, say, a hamster?  We go ahead and
+add "Hamster" to our `Array` using the "shovel" operator:
 
 ```ruby
 pets << "Hamster"
 ```
 
-But now, if we want to output hamster, we _also_ have to add an additional `puts`
-statement:
+Unless we add the following code, we won't see it.
 
 ```ruby
 puts pets[4] #=> Hamster
 ```
 
-Without this addition, `Hamster` would never be output to the terminal. Every
-change we make to the `pets` array would require an additional modification to
-our code. In a complex program, this can quickly become a major headache.
-
-By using a loop, however, we can abstract away the need for additional
-modifications.
+Obviously, this is not idea. We want to loop through "everything in the `pets`
+`Array`, however long it is." By using a loop we can do this.
 
 ## Abstracting Array Output
 
-Given our `pets` array, it would be great to simply say "for every element in
-this array, output the element to the terminal." This way, even if the array
-changed, we'd always output each and every element.
-
-With loops, we can do this! A very basic example would be a while loop with a
-counter:
+A very basic example would be a while loop with a counter:
 
 ```ruby
 counter = 0
@@ -113,11 +91,11 @@ returns `"Fish"`, `pets[3]` returns `"Bird"`, and `pets[4]` returns `"Hamster"`.
 All three are then output to the terminal.
 
 4. On the last loop, `counter` is incremented to `5`. However, there is no sixth
-element in the array, so `pets[5]` returns `nil`. This stops the `while` loop.
+element in the `Array`, so `pets[5]` returns `nil`. This stops the `while` loop.
 
-With this set up, no matter how long or short the `pets` array is, the loop will
+With this set up, no matter how long or short the `pets` `Array` is, the loop will
 output each element! We've built a _pet printer_ that works no matter how many
-pets are in our `pets` array!
+pets are in our `pets` `Array`!
 
 We could go further than this, though, by placing our `while` loop in a method.
 Instead of just a pet printer, we can turn this code into an all purpose
@@ -141,7 +119,7 @@ pets = ["Dog", "Cat", "Fish", "Bird", "Hamster"]
 output_array_elements(pets)
 ```
 
-But we could also use `output_array_elements` with all kinds of arrays!
+But we could also use `output_array_elements` with all kinds of `Array`s!
 
 ```ruby
 output_array_elements(["hello", "how are you?", "goodbye!"])
@@ -160,7 +138,7 @@ goodbye!
 An common alternative to the previous example is to utilize the methods built in
 to the Ruby `Array` class. Specifically, in these situations, we want to loop
 as many times are there are elements. To find out how many elements are in an
-array, we can use the `length` method:
+`Array`, we can use the `length` method:
 
 ```ruby
 array = ["Spring", "Summer", "Fall", "Winter"]
@@ -168,8 +146,8 @@ array.length
 #=> 4
 ```
 
-> **Note:** Ruby arrays also have methods called `size` and `count` that all
-perform the same function - return the number of elements in the array.
+> **Note:** Ruby `Array`s also have methods called `size` and `count` that all
+perform the same function - return the number of elements in the `Array`.
 
 Now that we can get the length, we would want to structure our loop so that
 we compare the value of `counter` with this length value. Updating the method
@@ -191,16 +169,17 @@ will execute.
 
 ## Iteration
 
-Using a loop to access each element in an array is very common in programming and 
-is generally referred to as _iteration_. We _iterate_ over each element, in these
+Using a loop to access each element in an `Array` is very common in programming
+and is referred to as _iteration_. We _iterate_ over each element, in these
 examples, printing out the values. In other examples, we might want to iterate
-over an array and update each element's value. If the values were numbers, we could
-do things like _sum_ all the values together using while loops and basic iteration.
+over an `Array` and update each element's value. If the values were numbers, we
+could do things like _sum_ all the values together using while loops and basic
+iteration.
 
 ## Conclusion
 
-Loops are a powerful tool for working with arrays. With just a small amount of
-code, we perform operations on every element in an array, regardless of how
+Loops are a powerful tool for working with `Array`s. With just a small amount of
+code, we perform operations on every element in an `Array`, regardless of how
 many elements there are!
 
 ## Resources
