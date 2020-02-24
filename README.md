@@ -7,8 +7,12 @@
 
 ## Introduction
 
-With an understanding of arrays and hashes, it is time to start putting them
-to work. So far, we've been working on arrays that we can see ahead of time.
+Arrays are often used to hold collections of related values. However, the power of 
+arrays is made much clearer when we can _work_ with all the data they contain. 
+
+So far, we've learned how to add and remove values from arrays, as well as
+access and change specific values. It is time to start putting arrayd to work. So
+far, we've been working on arrays that we can see ahead of time.
 
 ```ruby
 pets = ["Dog", "Cat", "Fish", "Bird"]
