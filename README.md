@@ -11,7 +11,7 @@ Arrays are often used to hold collections of related values. However, the power 
 arrays is made much clearer when we can _work_ with all the data they contain. 
 
 So far, we've learned how to add and remove values from arrays, as well as
-access and change specific values. It is time to start putting arrayd to work. So
+access and change specific values. It is time to start putting arrays to work. So
 far, we've been working on arrays that we can see ahead of time.
 
 ```ruby
